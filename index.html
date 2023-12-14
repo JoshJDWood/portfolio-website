@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a9a777d1bf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Joshua Wood</title>
+</head>
+
+<body>
+    <header>
+        <h1>Joshua Wood</h1>
+        <div id="quick-links">
+            <a class="icon-link" href="mailto:joshwoodsta@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            <a class="icon-link" href="https://github.com/JoshJDWood"><i class="fa-brands fa-github"></i></a>
+            <a class="icon-link" href="https://www.linkedin.com/in/joshua-wood-a8a849260/"><i
+                    class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <hr>
+        <div id="bio">
+            <p>I feel my most fulfilled when solving a challenging problem or engaging my creative side. I am an
+                enthusiastic self-starter who is eager to expand my programming knowledge and always excited to explore
+                new experiences beyond my comfort zone.</p>
+        </div>
+        <hr>
+        <nav id="main-nav">
+            <button class="nav-button" id="projects-button">
+                Projects
+            </button>
+            <button class="nav-button" id="skills-button">
+                Skills
+            </button>
+            <button class="nav-button" id="education-button">
+                Education
+            </button>
+            <button class="nav-button" id="experience-button">
+                Experience
+            </button>
+        </nav>
+        <hr>
+        <div id="projects-div" class="swappable-div">
+            <h2>Projects</h2>
+            <nav id="projects-nav">
+                <button class="nav-button" id="light-box-button">
+                    Light in a Box
+                </button>
+                <button class="nav-button" id="wordle-button">
+                    Wordle Mastermind
+                </button>
+                <button class="nav-button" id="watchlist-button">
+                    My Movie Watchlist
+                </button>
+                <button class="nav-button" id="cloud-button">
+                    Cloud Seeding
+                </button>
+                <button class="nav-button" id="jumbles-button">
+                    Jumble's Escape
+                </button>
+                <button class="nav-button" id="ar-button">
+                    AR Project
+                </button>
+            </nav>
+            <hr>
+            <div id="light-box-div" class="swappable-project-div">
+                <h2>Light in a Box</h2>
+                <img class="project-img" src="images/FeatureGraphic.png" alt="">
+                <div class="project-links">
+                    <a class="icon-link"
+                        href="https://play.google.com/store/apps/details?id=com.JoshuaWoodGames.LightinaBox"><i
+                            class="fa-brands fa-google-play"></i></a>
+                    <a class="icon-link" href="https://play.unity.com/mg/other/light-in-a-box-puzzle-game"><i
+                            class="fa-brands fa-unity"></i></a>
+                </div>
+                <p>Inspired by my passion for physics and puzzles, Light in a Box uses simple ideas around light, shadow
+                    and reflection to create challenging puzzles. My original concept game requires the player to place
+                    walls and mirrors to mould 2-dimensional light from its source into a given intricate shape. It is
+                    far more challenging than it sounds and, ironically, requires out of the box thinking.</p>
+                <p>This project was the most challenging I have attempted to date and required me to build a code
+                    intensive and deceptively complex lighting and reflection system. Creating this system was a puzzle
+                    in and of itself which I thoroughly enjoyed solving. It pushed me to grow my understanding of Unity,
+                    in particular its Universal Render Pipeline, and of programming in general.</p>
+                <p>Some of the the other barriers I overcame in the creation of this project include:
+                <ul>
+                    <li>Created all the sprites and artwork for the game in Krita. Including in-game visual effects like
+                        lit and unlit glow effects with shader graphs.</li>
+                    <li>A functional and sleek UI system.</li>
+                    <li>Creation of an effective tutorial which explains the tricky to understand premise of the puzzles
+                        without becoming long and boring.</li>
+                </ul>
+                </p>
+                <hr>
+            </div>
+            <div id="wordle-div" class="swappable-project-div">
+                <h2>Wordle Mastermind</h2>
+                <img class="project-img" src="images/WordleGraphic.png" alt="">
+                <div class="project-links">
+                    <a class="icon-link" href="https://joshjdwood.github.io/Wordle-Mastermind/"><i
+                            class="fa-solid fa-gamepad"></i></a>
+                </div>
+                <p>My browser game looks to reimagine the viral New York Times puzzle game, Wordle, and combines it with
+                    the traditional board game, Mastermind. By adapting the hint process, I have magnified the problem
+                    solving element of the game.</p>
+                <p>This project required me to develop a system that can detect when matching letters are placed in the
+                    correct space, matching letters placed in the wrong space but additionally how to correctly account
+                    for when duplicate letters are placed and how this impacts the hint dynamics. Wordle Mastermind also
+                    uses media queries to adapt the size of elements to make the game playable on a variety of devices.
+                </p>
+                <hr>
+            </div>
+            <div id="watchlist-div" class="swappable-project-div">
+                <h2>My Movie Watchlist</h2>
+                <img class="project-img" src="images/watchlist graphic.png" alt="">
+                <div class="project-links">
+                    <a class="icon-link" href="https://joshjdwood.github.io/my_movie_watchlist/"><i
+                            class="fa-solid fa-link"></i></a>
+                </div>
+                <p>A watchlist creation and management tool built to help users find the perfect film to watch. By
+                    allowing the user to select which columns to include, the film conditions criteria and report
+                    ordering, the filtering system returns personalised movie suggestions.</p>
+                <p>The most interesting part of this project was making the filtering system that takes any number of
+                    user inputs for: which columns to include in the report, movie criteria to be met and how the report
+                    should be ordered, to dynamically generate a single SQL query that returns a report that meets all
+                    the users conditions.</p>
+                <hr>
+            </div>
+            <div id="cloud-div" class="swappable-project-div">
+                <h2>Cloud Seeding Research Project</h2>
+                <img class="project-img" src="images/cloud graphic.jpeg" alt="">
+                <p>Within my final-year Mathematics group project we created and presented a model that used global
+                    positioning and seasonal weather data to assess the effectiveness of cloud seeding as a method to
+                    combat climate change. </p>
+                <p>Cloud seeding is the method of spraying salt aerosols from boats to effect cloud albedo (brightness).
+                    Increasing the brightness of clouds has a positive impact on climate change as it increases the
+                    amount of light reflected away from the earth and, resultantly, cools it. The program we built took
+                    large global weather datasets and ran simulations to see the effect on cloud albedo in different
+                    regions at different times of year. Our program returned equally large datasets for us to analyse
+                    and draw our conclusions from. This module helped me showcase my communication, teamwork and
+                    presenting skills in addition to programming and problem solving.</p>
+                <hr>
+            </div>
+            <div id="jumbles-div" class="swappable-project-div">
+                <h2>Jumbles Escape</h2>
+                <img class="project-img" src="images/jumbles graphic.png" alt="">
+                <div class="project-links">
+                    <a class="icon-link" href="https://www.youtube.com/watch?v=PPDlFStSZRE"><i
+                            class="fa-brands fa-youtube"></i></a>
+                </div>
+                <p>I was inspired to make my first original videogame project as a creative birthday present for my
+                    sister, Charlotte. Drawing heavy inspiration from Pac-Man, the game features my whole family and our
+                    dog Jumble as the protagonist.</p>
+                <p>For this game I created pixel art avatars for each member of the family and of our home. But the
+                    feature I am most proud of is the chasing/pathing ai system that had a basic understanding of the
+                    floorplan of the house to help it calculate the fastest route to target and traverse the environment
+                    effectively.</p>
+                <hr>
+            </div>
+            <div id="ar-div" class="swappable-project-div">
+                <h2>AR Project</h2>
+                <img class="project-img" src="images/ar graphic.jpg" alt="">
+                <div class="project-links">
+                    <a class="icon-link" href="https://www.youtube.com/shorts/lWk1lkA9jNg"><i
+                            class="fa-brands fa-youtube"></i></a>
+                </div>
+                <p>I created this project as an introduction for myself into XR development. This AR app is a simple
+                    educational number recognition game for young children where a number will spawn into the real world
+                    environment and the user will be prompted to say the number out loud and find its match in the list
+                    of numbers shown.</p>
+                <p>For this project I familiarised myself with XR development in unity and included a system that would
+                    generate random numbers that would not repeat, with a colourful progress tracker though the first 10
+                    numbers.</p>
+                <hr>
+            </div>
+        </div>
+        <div id="skills-div" class="swappable-div">
+            <h2>Skills</h2>
+            <p>Below, find my self evaluated skill levels.</p>
+            <!-- <p>I have scored myself as a percentile relative to others in my application group.</p> -->
+            <hr>
+            <div>
+                <h3>Programming Languages</h3>
+                <div class="skill-box" style="width:80%">
+                    C# <span class="skill-score">80</span>
+                </div>
+                <div class="skill-box" style="width:75%">
+                    C++ <span class="skill-score">75</span>
+                </div>
+                <div class="skill-box" style="width:65%">
+                    Python <span class="skill-score">65</span>
+                </div>
+                <div class="skill-box" style="width:65%">
+                    JavaScript <span class="skill-score">65</span>
+                </div>
+                <div class="skill-box" style="width:60%">
+                    SQL <span class="skill-score">60</span>
+                </div>
+                <div class="skill-box" style="width:60%">
+                    HTML <span class="skill-score">60</span>
+                </div>
+                <div class="skill-box" style="width:60%">
+                    CSS <span class="skill-score">60</span>
+                </div>
+                <div class="skill-box" style="width:50%">
+                    Matlab <span class="skill-score">50</span>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <h3>Tools and Engines</h3>
+                <div class="skill-box" style="width:80%">
+                    Unity <span class="skill-score">80</span>
+                </div>
+                <div class="skill-box" style="width:80%">
+                    Visual Studio <span class="skill-score">80</span>
+                </div>
+                <div class="skill-box" style="width:65%">
+                    Git <span class="skill-score">65</span>
+                </div>
+                <div class="skill-box" style="width:55%">
+                    Krita <span class="skill-score">55</span>
+                </div>
+                <div class="skill-box" style="width:50%">
+                    Photoshop <span class="skill-score">50</span>
+                </div>
+                <div class="skill-box" style="width:40%">
+                    Blender <span class="skill-score">40</span>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div id="education-div" class="swappable-div">
+            <h2>Education</h2>
+            <hr>
+            <div>
+                <h3>Just IT</h3>
+                <h5>2023</h5>
+                <h4>Software Development Skills Bootcamp</h4>
+                <p>This course cemented and built upon many of the programming skills I have developed over the last few
+                    years, while also branching out into different media and programming languages such as Python and
+                    JavaScript.</p>
+            </div>
+            <hr>
+            <div>
+                <h3>Unity Learn</h3>
+                <h5>2021 - 2022</h5>
+                <h4>Unity Essentials and Junior Programmer Pathways</h4>
+                <p>As an introduction to Unity, I completed Unity's own Essentials and Junior Programmer Pathways as a
+                    way to build a solid understanding of the engine before moving on to building my own original
+                    projects.</p>
+            </div>
+            <hr>
+            <div>
+                <h3>University of Exeter</h3>
+                <h5>2016 - 2019</h5>
+                <h4>BSc Mathematics with honours</h4>
+                <p class="p-with-list">I received my bachelors in Mathematics from the University of Exeter. Notable
+                    modules include: </p>
+                <ul class="module-list">
+                    <li>Programming for Mathematics</li>
+                    <li>Cryptography</li>
+                    <li>Vectors and Matrices</li>
+                    <li>Numerics and Optimisations</li>
+                    <li>Graphs, Networks and Algorithms</li>
+                    <li>Dynamics</li>
+                    <li>Calculus and Geometry</li>
+                </ul>
+            </div>
+            <hr>
+            <div>
+                <h3>Glenthorne High School</h3>
+                <h5>2009 - 2016</h5>
+                <p class="p-with-list">I attended Glenthorne High School where I achieved A-Levels in: </p>
+                <ul class="module-list">
+                    <li>Mathematics</li>
+                    <li>Further Mathematics</li>
+                    <li>Physics</li>
+                </ul>
+            </div>
+            <hr>
+        </div>
+        <div id="experience-div" class="swappable-div">
+            <h2>Experience</h2>
+            <hr>
+            <div>
+                <h3>Self Employed Swimming Teacher</h3>
+                <h5>2014 - 2023</h5>
+                <p>I currently work as a swimming teacher privately and with multiple swim schools. This involves:
+                    communicating schedules and progress reports with parents; planning and leading fun, engaging and
+                    practical swimming lessons; and staying up to date with best swimming practices.</p>
+            </div>
+            <hr>
+            <div>
+                <h3>C R Toogood & Co Ltd</h3>
+                <h5>2017</h5>
+                <p>Worked at an insurance broker as part of the team transferring the entire catalogue of customer
+                    information to a new system in order to improve efficiencies across the company. This included
+                    collaborating with team members to develop new processes for more efficient data transfer.</p>
+            </div>
+            <hr>
+        </div>
+    </header>
+    <script src="portfolio.js"></script>
+</body>
+
+</html>
