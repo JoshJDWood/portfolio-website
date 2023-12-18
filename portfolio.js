@@ -5,7 +5,7 @@ let educationDiv  = document.getElementById("education-div");
 let experienceDiv  = document.getElementById("experience-div");
 let swappableDivs = [projectsDiv, skillsDiv, educationDiv, experienceDiv];
 for (div of swappableDivs){
-    div.style.display = "none"; //This is so that all divs are set to display none by default       
+    div.classList.add('spin-out', 'hidden'); //This is so that all divs are set to display none by default       
 }
 document.getElementById('projects-button').addEventListener('click', () => { displayDiv(0, swappableDivs) });
 document.getElementById('skills-button').addEventListener('click', () => { displayDiv(1, swappableDivs) });
@@ -21,7 +21,7 @@ let arDiv  = document.getElementById("ar-div");
 let cloudDiv  = document.getElementById("cloud-div");
 let swappableProjects = [lightBoxDiv, wordleDiv, watchlistDiv, jumblesDiv, arDiv, cloudDiv]
 for (div of swappableProjects){
-    div.style.display = "none"; //This is so that all divs are set to display none by default       
+    div.classList.add('spin-out', 'hidden'); //This is so that all divs are set to display none by default       
 }
 document.getElementById('light-box-button').addEventListener('click', () => { displayDiv(0, swappableProjects) });
 document.getElementById('wordle-button').addEventListener('click', () => { displayDiv(1, swappableProjects) });
@@ -31,12 +31,33 @@ document.getElementById('ar-button').addEventListener('click', () => { displayDi
 document.getElementById('cloud-button').addEventListener('click', () => { displayDiv(5, swappableProjects) });
 
 function displayDiv(i, swappable) {    
-    if (swappable[i].style.display === "none") {
+    if (swappable[i].classList.contains('hidden')) {
         for (div of swappable){
-            div.style.display = "none";            
+            if (!div.classList.contains('hidden')){
+                let shownDiv = div; //have to set a new value for div for when transition ends
+                shownDiv.classList.add('spin-out');
+                shownDiv.addEventListener('transitionend', function(e) {
+                    shownDiv.classList.add('hidden');
+                    swappable[i].classList.remove('hidden');
+                    setTimeout(() => {swappable[i].classList.remove('spin-out')}, 10);
+                }, {
+                    capture: false,
+                    once: true,
+                    passive: false
+                });
+                return;
+            } 
         }
-        swappable[i].style.display = "block";
+        swappable[i].classList.remove('hidden');
+        setTimeout(() => {swappable[i].classList.remove('spin-out')}, 10);
     } else {
-        swappable[i].style.display = "none";
+        swappable[i].classList.add('spin-out');
+        swappable[i].addEventListener('transitionend', function(e) {
+            swappable[i].classList.add('hidden');
+        }, {
+            capture: false,
+            once: true,
+            passive: false
+        });
     }
 }

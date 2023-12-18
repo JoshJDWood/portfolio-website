@@ -1,34 +1,66 @@
 :root{
-    --whiteBlue: #f2f8fd;    
-    --lightBlue: #add7f6;
-    --darkBlue: #1c448e;
+    --nearWhite: #FDF0D5;
+    --conBright: #C1121F;
+    --contrast: #910000;  
+    --lightest: #74a7c7;
+    --midShade: #135e87;
+    --strongShade: #003049;
 
-    background-color: #1c448e;
+    background-color: var(--midShade);    
 }
 
 /* General / Whole document */
 body{
-    color: var(--darkBlue);
+    color: var(--midShade);
     text-align: center;
-    height: 100%;
+    min-height: 100vh;
     width: 50%;
-    padding: 5% 5% 90% 5%;
-    border: var(--lightBlue) 3px solid;
+    padding: 5% 5% 10vh 5%;
+    border-left: var(--lightest) 3px solid;
+    border-right: var(--lightest) 3px solid;
     margin: auto;
-    background-color: var(--whiteBlue);
+    background-color: var(--nearWhite);
     font-size: larger;
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2{
+    color: var(--contrast);
+    font-family: 'Philosopher', sans-serif;
+}
+
+h3, h4, h5, h6{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h3{
+    color: var(--contrast);
+}
+
+button{
+    color: var(--strongShade);
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 700;
 }
 
 hr{
-    border-top: 3px double var(--darkBlue);
+    border-top: 3px double var(--lightest);
 }
 
 p, ul{
     text-align: justify;
 }
 
+/* header section */
+#profile-pic{
+    border: var(--midShade) solid 3px;
+    /* border-radius: 50%; */
+    width: 30%;
+}
+
 #quick-links{
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;    
 }
 
 /* Nav sections */
@@ -44,31 +76,42 @@ p, ul{
 }
 
 .nav-button{
-    font-size: 0.8rem;
+    font-size: 0.7em;
     padding: 1rem 0rem;
     margin: 1em 7.5%;
-    border: var(--darkBlue) solid 2px;
+    border: var(--midShade) solid 2px;
     background-color: transparent;
     text-transform: uppercase;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);  
 }
 
 .nav-button:hover{    
-    border: 2px solid var(--whiteBlue);
-    box-shadow: inset 0 0 20px var(--darkBlue);
+    border: 2px solid var(--nearWhite);
+    box-shadow: inset 0 0 20px var(--midShade);
     outline: 1px solid;
-    outline-color: var(--whiteBlue);
+    outline-color: var(--nearWhite);
     outline-offset: 10px;
 }
 
 /* Main sections */
-.swappable-div{
-    display: none;
+.swappable-div, .swappable-project-div{
+    display: block;
+    transition: all 400ms cubic-bezier(.55,0,.45,1);
+    transform: rotate3d(0, 1, 0, 0deg);
+}
+
+.spin-out{
+    transform: rotate3d(0, 1, 0, 90deg);
+}
+
+.hidden{
+    /* had to separate from spin-out as transitions don't work with display property */ 
+    display: none; 
 }
 
 /* skill section */
@@ -79,7 +122,7 @@ p, ul{
 .skill-box{
     padding: 0.3rem 0.6rem;
     text-align: left;
-    border: var(--darkBlue) solid 3px;
+    border: var(--midShade) solid 3px;
     margin-bottom: 0.2rem;
 }
 
@@ -144,22 +187,30 @@ p, ul{
 }
 
 .icon-link{
-    border: var(--darkBlue) solid 3px;
-    /* border-radius: 3px; */
+    border: var(--midShade) solid 1px;
     padding: 0.3rem 0.6rem;
     margin: 0.5rem 0.5rem;
-    color: var(--darkBlue);
+    color: var(--contrast);
     font-size: 1.5rem;
     width: 50%;
+
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.icon-link:hover{
+    border: 1px solid var(--nearWhite);
+    box-shadow: inset 0 0 20px var(--conBright);
+    outline: 1px solid;
+    outline-color: var(--nearWhite);
+    outline-offset: 10px;
 }
 .icon-link:link .icon-link:visited{
-    color: var(--darkBlue);
+    color: var(--contrast);
     text-decoration: none;
 }
 
 .project-img{
     width: 50%;
-    border: var(--darkBlue) solid 3px;
+    border: var(--midShade) solid 3px;
 }
 
 /* light in a box project */
@@ -169,14 +220,17 @@ p, ul{
 
 /* media queries */
 @media (max-width: 800px){
+    body{
+        width: 70%;
+    }
     #main-nav{
         grid-template-columns: 50% 50%;
     }
-    .nav-button{
-        font-size: 0.6rem;
-    }
     .project-img{
         width: 100%;
+    }
+    #profile-pic{
+        width: 50%;
     }
 }
 
@@ -189,3 +243,9 @@ p, ul{
         grid-template-rows: 33.3% 33.3% 33.3%;
     }
 }
+
+/* 
+font-family: 'Lato', sans-serif;
+font-family: 'Philosopher', sans-serif;
+font-family: 'Titillium Web', sans-serif;
+*/
