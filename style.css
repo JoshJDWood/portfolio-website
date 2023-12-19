@@ -6,7 +6,8 @@
     --midShade: #135e87;
     --strongShade: #003049;
 
-    background-color: var(--midShade);    
+    background: var(--strongShade) url("images/background\ pattern\ midshade.png");
+    background-size: 100px; 
 }
 
 /* General / Whole document */
